@@ -23,9 +23,47 @@ public class Lab3
   public static void completeBars()
   {
     //insert instructions below
+    while (Lab3.leftIsClear ())
+    {
+      Lab3.oneBar ();
     
-    
+       Robot.turnLeft ();
+       
+   if (Lab3.leftIsClear ())
+   {
+   Robot.move ();
+    }
+    }
+  }  
+  
+  
+  public static void oneBar ()
+  {
+   Robot.turnLeft ();
+   while (!Robot.onDark ())
+   {
+     Robot.makeDark ();
+     Robot.move ();
+   }
+   Lab3.turnAround ();
+   while (Robot.frontIsClear ())
+   {
+     Robot.move ();
+   }
   }
+  
+  public static boolean leftIsClear ()
+  {Robot.turnLeft ();
+    if (Robot.frontIsClear ())
+    {
+     Lab3.turnRight ();
+     return true;
+    }
+ else 
+ {return false;
+ }
+  }
+  
   
   public static void testCompleteBars1()
   {

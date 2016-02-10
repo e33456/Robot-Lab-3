@@ -23,7 +23,6 @@ public class Lab3
   public static void completeBars()
   {
     //insert instructions below
-
     
     
   }
